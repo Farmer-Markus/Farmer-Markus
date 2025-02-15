@@ -1,0 +1,260 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+
+    color: white;
+    background-color: #242424;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-left: 18%;
+    padding-top: 8px;
+    padding-bottom: 2px;
+    display: flex;
+
+    font-size: 13px;
+    background-color: #1f1f1f;
+}
+
+.copyright {
+    margin: 0px;
+    margin-right: 10px;
+    margin-left: auto;
+
+    order: 2;
+}
+
+.ghLink {
+    margin: 0px;
+    margin-left: 10px;
+    margin-right: auto;
+
+    order: 1;
+}
+
+.ghLink a {
+    color: rgb(30, 100, 220);
+    text-decoration: none;
+}
+
+.navBar {
+    width: 18%;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+
+    z-index: 1; /* ebenen wie sich sachen überlappen */
+    background-color: #242424;
+    box-shadow: 2px 5px 3px rgb(27, 27, 27);
+}
+
+.navBarImage {
+    width: 127px;
+    height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+}
+
+.topNavBar {
+    width: 0px;
+    height: 0px;
+    top: 0;
+    position: fixed;
+
+    background-color: #303030;
+    box-shadow: 2px 0px 3px #141414;
+    
+    opacity: 0;
+}
+
+.navBarButton {
+    width: 60px;
+    height: 45px;
+    top: 0px;
+    position: fixed;
+
+    align-content: center;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#navBarButtonLine {
+    background-color: white;
+    margin: auto;    
+    width: 32px;
+    height: 2px;
+}
+
+.naviButtonProblemContainer {
+    background-color: #1d1d1d;
+    border: 1px solid rgb(25, 25, 25);
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    margin-bottom: 4%;
+}
+
+.naviButtonProblemContainer {
+    display: block;
+}
+
+#naviButtonProblems:hover ~ .naviButtonProblemContainer, /* Buttons bleiben angezeigt solange maus drüber ist */
+#naviButtonProblems:active ~ .naviButtonProblemContainer, /* oder am handy dre button noch gefocust */
+.naviButtonProblemContainer:hover {
+    width: unset;
+    height: unset;
+    padding: unset;
+    margin: unset;
+    opacity: unset;
+
+    opacity: 1;
+}
+
+.naviContainerButtons:hover {
+    background-color: #1a1a1a;
+}
+
+/* content bereich */
+.mediaSpace {
+    display: flex;
+    flex: 1;
+   
+    justify-content: center;
+    align-items: flex-start;
+    
+    background-color: #242424;
+    color: #ECECEC;
+    padding-left: 10px;
+    margin-left: 18%;
+    box-sizing: border-box;
+}
+
+/*
+.text {
+    max-width: 800px;  breite zum besseren Lesen 
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+*/
+
+/* Lightmode */
+@media(prefers-color-scheme: light) {
+    html, body {
+        color: black;
+        background-color: white;
+    }
+
+    .mediaSpace {
+        color: black;
+        background-color: white;
+    }
+    .navBar {
+        background-color: rgb(245, 245, 245);
+        box-shadow: 2px 5px 3px rgb(167, 167, 167);
+    }
+
+    .topNavBar {
+        background-color: #eeeeee;
+        box-shadow: 2px 5px 3px rgb(210, 210, 210);
+    }
+
+    #navBarButtonLine {
+        background-color: black;
+    }
+
+    .naviButtonProblemContainer {
+        background-color: rgb(220, 220, 220);
+        background-color: rgb(230, 230, 230);
+    }
+
+    .footer {
+        background-color: #eeeeee;
+    }
+}
+
+@media(max-width: 2400px) {
+    .navBar {
+        width: 250px;
+    }
+    .mediaSpace {
+        margin-left: 250px;
+    }
+
+    .footer {
+        margin-left: 250px;
+    }
+
+}
+
+@media(max-width: 1600px) {
+    .navBar {
+        width: 200px;
+    }
+    .mediaSpace {
+        margin-left: 200px;
+    }
+
+    .footer {
+        margin-left: 200px;
+    }
+}
+
+/* bei kleinem screen wird sidebar ausgeblendtet und button eingeblendet */
+@media(max-width: 800px) {
+    .mediaSpace {
+        margin-left: 5px;
+        margin-top: 45px;
+    }
+
+    .footer {
+        margin-left: 0px;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+
+    .copyright {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .ghLink {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .navBar {
+        width: 250px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: none;
+    }
+
+    .topNavBar {
+        width: 100%;
+        height: 45px;
+        opacity: 1;
+    }
+
+    .navBarButton {
+        opacity: 1;
+    }
+
+    .navBarButton:focus + .navBar,
+    .navBar:focus-within {
+        transform: translateX(0);
+    }
+
+}

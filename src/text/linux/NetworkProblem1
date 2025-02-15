@@ -1,0 +1,22 @@
+<h2><ins> Documentation of Problems I&#39;ve encountered with linux and how I fixed them </ins></h2>
+<h3>Wifi:</h3>
+<p>Using:</p>
+<ul>
+    <li>archlinux</li>
+    <li>gnome-desktop</li>
+</ul>
+<p>Gnome uses the <a href="https://wiki.archlinux.org/title/NetworkManager">NetworkManager</a> to manage network devices. </br>
+It never worked well for me: Starting my pc asking for wifi password, keeps reconnecting, connecting very slow. </br>
+My solution: </br></p>
+<p>Run this command to check if multiple networking services are running.</p>
+<pre>
+    <code>
+        <p>systemctl list-unit-files --state enabled</p>
+    </code>
+</pre><p>Just google for a few services you don&#39;t know and find out if they&#39;re network services. (Don&#39;t disable the NetworkManager!) </br></p>
+<p>For me it was the <code>iwd.service</code>. </br>
+So I&#39;ve disabled the service using:</p>
+<pre><code><span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">systemctl</span> <span class="hljs-selector-tag">stop</span> <span class="hljs-selector-tag">iwd</span><span class="hljs-selector-class">.service</span>
+<span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">systemctl</span> <span class="hljs-selector-tag">disable</span> <span class="hljs-selector-tag">iwd</span><span class="hljs-selector-class">.service</span>
+</code></pre><p>This fixed the Issues for me. </br></p>
+<p><strong>Thanks to <a href="https://bbs.archlinux.org/viewtopic.php?id=226251">this</a> post.</strong></p>
