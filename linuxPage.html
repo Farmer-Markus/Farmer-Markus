@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer_Markus Linux problem solving</title>
+    <link rel="icon" type="image/x-icon" href="src/images/webIcon.png">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <link rel="stylesheet" href="navigationbar.css">
+
+    <div class="topNavBar">
+        
+    </div>
+
+    <div class="navBarButton" tabindex="0">
+        <div id="navBarButtonLine"></div>
+        <div id="navBarButtonLine" style="margin-top: 7px; margin-bottom: 7px;"></div>
+        <div id="navBarButtonLine"></div>
+    </div>
+
+    <div class="navBar" tabindex="0">
+        <nav class="navigationbar">
+            <img class="navBarImage" src="src/images/webIcon.png"></img>
+            <a class="naviButtons" id="naviButtonHome" href="index.html">Home</a>
+
+            <a id="naviButtonProblems">Problem solving</a>
+            <div class="naviButtonProblemContainer">
+                <a class="naviContainerButtons" id="naviButtonLinux" href="linuxPage.html">Linux</a>
+                <a class="naviContainerButtons" id="naviButtonProgramming" href="programmingPage.html">Programming</a>
+            </div>
+
+            <a class="naviButtons" id="naviButtonProjects">Projects</a>
+        </nav>
+    </div>
+
+    <style>
+        #naviButtonLinux { background-color: rgb(50, 100, 50); }
+        @media(prefers-color-scheme: light) {
+            #naviButtonLinux { background-color: rgb(0, 255, 0); }
+        }
+    </style>
+
+    <div class="mediaSpace">
+        <div style="max-width: 800px; text-align: left; vertical-align:bottom; overflow-wrap: break-word; word-break: break-word;">
+            <h2>Documentation of Problems I've encountered with linux and how I fixed them</h2>
+
+            <details>
+                <summary>Wifi keeps disconecting archlinux gnome</summary>
+                <h3>Wifi:</h3>
+                <p>Using:</p>
+                <ul>
+                    <li>archlinux</li>
+                    <li>gnome-desktop</li>
+                </ul>
+                <p>Gnome uses the <a href="https://wiki.archlinux.org/title/NetworkManager">NetworkManager</a> to manage network devices. </br>
+                It never worked well for me: Starting my pc asking for wifi password, keeps reconnecting, connecting very slow. </br>
+                My solution: </br></p>
+                <p>Run this command to check if multiple networking services are running.</p>
+                <code>
+                    <p>systemctl list-unit-files --state enabled</p>
+                </code>
+                <p>Just google for a few services you don't know and find out if they're network services. (Don't disable the NetworkManager!) </br></p>
+                <p>For me it was the <code>iwd.service</code>. </br>
+                So I've disabled the service using:</p>
+                <code>
+                    sudo systemctl stop iwd.service <br>
+                    sudo systemctl disable iwd.service
+                </code>
+                <p>This fixed the Issues for me. </br>
+                <strong>Thanks to <a href="https://bbs.archlinux.org/viewtopic.php?id=226251" target="_blank">this</a> post.</strong></p>
+            </details>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span class="ghLink">My <a href="https://github.com/Farmer-Markus" target="_blank">Github Profile</a>.</span>
+        <span class="copyright" xmlns:cc="http://creativecommons.org/ns#" >&copy; 2025 Farmer_Markus, under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="color: rgb(30, 100, 220);">CC BY 4.0</a></span>
+    </footer> 
+
+</body>
+</html>

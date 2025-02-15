@@ -1,0 +1,32 @@
+.navBar a {
+    padding: 8% 0% 8% 0%;
+
+    text-align: center;
+    display: block;
+    color: orangered;
+    text-decoration: none;
+    border: 1px solid transparent; /* damit beim hovern die border nicht erstellt werden muss und sich die abstände verändern */
+}
+
+.naviButtons {
+    margin-bottom: 4%;
+}
+
+.naviButtons:hover {
+    background-color: rgb(35, 35, 35);
+    border: 1px solid rgb(25, 25, 25);
+}
+
+img {
+    width: 100%;
+
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+@media(prefers-color-scheme: light) {
+    .naviButtons:hover {
+        background-color: rgb(230, 230, 230);
+        border: 1px solid rgb(167, 167, 167);
+    }
+}
