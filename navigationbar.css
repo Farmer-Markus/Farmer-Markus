@@ -1,4 +1,17 @@
-.navBar a {
+.navBar {
+    width: 18%;
+    height: 100vh;
+    max-width: 45%;
+    top: 0;
+    position: fixed;
+
+    z-index: 1; /* ebenen wie sich sachen überlappen */
+    background-color: #242424;
+    box-shadow: 2px 5px 3px rgb(27, 27, 27);
+}
+
+.naviButtons {
+    margin-bottom: 4%;
     padding: 8% 0% 8% 0%;
 
     text-align: center;
@@ -8,13 +21,47 @@
     border: 1px solid transparent; /* damit beim hovern die border nicht erstellt werden muss und sich die abstände verändern */
 }
 
-.naviButtons {
-    margin-bottom: 4%;
-}
-
 .naviButtons:hover {
     background-color: rgb(35, 35, 35);
     border: 1px solid rgb(25, 25, 25);
+}
+
+.topNavBar {
+    width: 0px;
+    height: 0px;
+    top: 0;
+    position: fixed;
+
+    background-color: #303030;
+    box-shadow: 2px 0px 3px #141414;
+    
+    opacity: 0;
+}
+
+.navBarImage {
+    width: 127px;
+    height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+}
+
+.navBarButton {
+    width: 60px;
+    height: 45px;
+    top: 0px;
+    position: fixed;
+
+    align-content: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#navBarButtonLine {
+    background-color: rgb(120, 120, 120);
+    margin: auto;
+    width: 32px;
+    height: 2px;
 }
 
 img {
@@ -24,9 +71,153 @@ img {
     border-bottom: 1px solid black;
 }
 
+/* SUBMENU PROBLEM SOLVING */
+.subMenu {
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    
+    background-color: #1d1d1d;
+    box-shadow: 2px 5px 3px rgb(20, 20, 20);
+    display: block;
+    opacity: 0;
+}
+
+.subMenuButton {
+    background-color: #242424;
+}
+
+.subMenuNaviButtons:hover {
+    background-color: #181818;
+}
+
+.subMenuButton:focus ~ .subMenu,
+.subMenu:focus-within {
+    margin-left: 100%;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    z-index: 2;
+}
+
+.subMenuButton:focus {
+    opacity: 0;
+}
+
+.subMenuButtonOverwrite {
+    width: 99%; /* weiß grad nicht anders. wegen "position: absolute;" */
+    top: 0;
+    position: absolute;
+    text-align: center;
+    
+    background-color: #1d1d1d;
+    z-index: -1;
+}
+
+.subMenuButtonOverwrite:hover {
+    background-color: #181818;
+}
+
+.subMenuButton:focus + .subMenuButtonOverwrite {
+    z-index: 1;
+}
+
+
 @media(prefers-color-scheme: light) {
     .naviButtons:hover {
         background-color: rgb(230, 230, 230);
         border: 1px solid rgb(167, 167, 167);
+    }
+
+    .navBar {
+        background-color: rgb(245, 245, 245);
+        box-shadow: 2px 5px 3px rgb(167, 167, 167);
+    }
+
+    .topNavBar {
+        background-color: #eeeeee;
+        box-shadow: 2px 5px 3px rgb(210, 210, 210);
+    }
+
+    #navBarButtonLine {
+        background-color: black;
+    }
+
+    .subMenuButton {
+        background-color: rgb(245, 245, 245);
+    }
+    
+    .subMenuButtonOverwrite {
+        background-color: rgb(215, 215, 215);
+    }
+
+    .subMenuButtonOverwrite:hover {
+        background-color: rgb(195, 195, 195);
+    }
+
+    .subMenu {
+        background-color: rgb(215, 215, 215);
+        box-shadow: 2px 5px 3px rgb(175, 175, 175);
+    }
+
+    .subMenuNaviButtons:hover {
+        background-color: rgb(195, 195, 195);
+    }
+}
+
+@media(max-width: 2400px) {
+    .navBar {
+        width: 250px;
+    }
+}
+
+@media(max-width: 1600px) {
+    .navBar {
+        width: 200px;
+    }
+}
+
+/* bei kleinem screen wird sidebar ausgeblendtet und button eingeblendet */
+@media(max-width: 800px) {
+    .navBar {
+        width: 250px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: none;
+    }
+
+    /* Schatten nur anzeigen, wenn ausgefahren/im focus */
+    body:has(.navBar:focus-within),
+    body:has(.navBarButton:focus) {
+        .navBar {
+            box-shadow: 2px 5px 3px rgb(27, 27, 27); /* Schatten nur wenn sichtbar */
+        }
+    }
+
+    .topNavBar {
+        width: 100%;
+        height: 45px;
+        opacity: 1;
+    }
+
+    .navBarButton {
+        opacity: 1;
+    }
+
+    .navBarButton:focus + .navBar,
+    .navBar:focus-within {
+        transform: translateX(0);
+    }
+}
+
+/* nochmal, da oben der schatten nicht den lighmode beachtet :/ */
+@media(prefers-color-scheme: light) {
+    body:has(.navBar:focus-within),
+    body:has(.navBarButton:focus) {
+        .navBar {
+            box-shadow: 2px 5px 3px rgb(167, 167, 167);
+        }
     }
 }
