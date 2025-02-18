@@ -26,11 +26,23 @@
             <img class="navBarImage" src="src/images/webIcon.png"></img>
             <a class="naviButtons" id="naviButtonHome" href="index.html">Home</a>
 
-            <a id="naviButtonProblems">Problem solving</a>
-            <div class="naviButtonProblemContainer">
+
+            <div class="subMenuContainer" style="display: block; position: relative; width: 100%; height: auto; margin: 0;">
+                <div class="subMenuButton naviButtons" tabindex="0">^ Problem solving</div>
+                <div class="subMenuButtonOverwrite naviButtons" tabindex="0">> Problem solving</div>
+                <div class="subMenu">
+                    <a class="subMenuNaviButtons naviButtons" id="naviButtonLinux" href="linuxPage.html">Linux</a>
+                    <a class="subMenuNaviButtons naviButtons" id="naviButtonProgramming" href="programmingPage.html">Programming</a>
+                </div>
+            </div>
+            
+            <!--
+            <details class="naviButtonProblemContainer">
+                <summary id="naviButtonProblems">Problem solving</summary>
                 <a class="naviContainerButtons" id="naviButtonLinux" href="linuxPage.html">Linux</a>
                 <a class="naviContainerButtons" id="naviButtonProgramming" href="programmingPage.html">Programming</a>
-            </div>
+            </details>
+            -->
 
             <a class="naviButtons" id="naviButtonProjects">Projects</a>
         </nav>
