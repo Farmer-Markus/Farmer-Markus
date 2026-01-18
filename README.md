@@ -16,4 +16,5 @@ Games worth playing: [Return to the Roots](https://github.com/Return-To-The-Root
 Check out my [Android port](https://github.com/Farmer-Markus/s25rttr-android) of [Settlers 2](https://en.wikipedia.org/wiki/The_Settlers_II) [Return to the Roots](https://siedler25.de)
 
 
-<img height=165 src="https://github-readme-stats.vercel.app/api?username=Farmer-Markus&card_width=459&line_height=24&show_icons=true&theme=github_dark_dimmed&bg_color=00000000"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Farmer-Markus&&theme=github_dark_dimmed&layout=compact&bg_color=00000000">
+![](./profile/stats.svg)
+![](./profile/top-langs.svg)
