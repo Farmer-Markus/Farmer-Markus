@@ -13,7 +13,8 @@ Games worth playing: [Return to the Roots](https://github.com/Return-To-The-Root
 3. Don't like but learning
    - python
 
-Check out my [Android port](https://github.com/Farmer-Markus/s25rttr-android) of [Settlers 2](https://en.wikipedia.org/wiki/The_Settlers_II) [Return to the Roots](https://siedler25.de)
+Check out my [Android port](https://github.com/Farmer-Markus/s25rttr-android) of [Settlers 2](https://en.wikipedia.org/wiki/The_Settlers_II) [Return to the Roots](https://siedler25.de) <br>
+Feel free to [mail](mailto:farmermarkus@outlook.de) me any question or just talk to me :D
 
 
 ![](./profile/stats.svg)
