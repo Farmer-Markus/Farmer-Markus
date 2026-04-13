@@ -11,7 +11,7 @@ Even 3d games should be able to run on lower hardware with lower graphic setting
 
 ### Additional
 Check out my [Android port](https://github.com/Farmer-Markus/s25rttr-android) of [Settlers 2](https://en.wikipedia.org/wiki/The_Settlers_II) [Return to the Roots](https://siedler25.de) <br>
-Feel free to [mail](mailto:farmermarkus@outlook.de) me any questions or suggestions :D
+Feel free to [mail](mailto:mail@farmermarkus.de) me any questions or suggestions :D
 
 
 ![](./profile/stats.svg)
