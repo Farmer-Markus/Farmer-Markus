@@ -1,21 +1,34 @@
 ## Farmer_Markus
 I love open source software and my goal is to rewrite Nintendo's Legend of Zelda Spirit Tracks in c++ and use the original 3d models/textures and music.
 
-Games worth playing: [Return to the Roots](https://github.com/Return-To-The-Roots/s25client), [Mindustry](https://github.com/Anuken/Mindustry), [0a.d.](https://github.com/0ad/0ad),  [Minecraft](https://www.minecraft.net/), [Satisfactory](https://www.satisfactorygame.com/), [Warzone 2100](https://wz2100.net/), [Factorio](https://www.factorio.com/), [Raft](https://www.raft-game.com/), [Anno 1404](https://de.wikipedia.org/wiki/Anno_1404)
+### Goals
+- Create Linux mime editor / TUI interface
+- Enhance [Settlers 2 android port](https://github.com/Farmer-Markus/s25rttr-android)
+- Create 2D [Factorio](https://www.factorio.com/) inspired game
+- Create libNTR (Nintendo Nitro lib)
+- Recreate Nintedo's Zelda Spirit Tracks using libNTR
 
-I hate games that need the newest hardware and internet to play. <br>
+### AI
+I like AI being used to help develop software, but not AI developing software alone. <br>
+Please understand your code and don't just throw all your wishes to Claude <br>
+AI is awesome to help with problems, explain something or even write some example implementation or algorithms. <br>
+If you are willing to contribute, please understand what you are doing <br>
 
-I also hate using AI to write code. <br>
-I'm using ai to learn/explain new stuff I can't find via google but never to write any code! <br>
-Ai should be a tool, a backup and helper but not a code generation "agent"! Please keep this shit out of opensource software, thanks. <br>
-I've seen people opening hundreds of pr's per week with just Ai code, explanation and description. I hate that <br>
-If you like programming, learn it. If you like opensource software, don't bother everyone with unnecessary bullshit
+### Awesome games
+- [Return to the Roots (Settlers 2)](https://github.com/Return-To-The-Roots/s25client)
+- [Mindustry](https://github.com/Anuken/Mindustry)
+- [0a.d.](https://github.com/0ad/0ad)
+- [Minecraft](https://www.minecraft.net/)
+- [Satisfactory](https://www.satisfactorygame.com/)
+- [Warzone 2100](https://wz2100.net/)
+- [Factorio](https://www.factorio.com/)
+- [Raft](https://www.raft-game.com/)
+- [Anno 1404](https://de.wikipedia.org/wiki/Anno_1404)
+- [System Shock 2 (Remaster)](https://store.steampowered.com/app/866570/System_Shock_2_25th_Anniversary_Remaster/)
 
+<br>
 
-### Additional
-Check out my [Android port](https://github.com/Farmer-Markus/s25rttr-android) of [Settlers 2](https://en.wikipedia.org/wiki/The_Settlers_II) [Return to the Roots](https://siedler25.de) <br>
 Feel free to [mail](mailto:mail@farmermarkus.de) me any questions or suggestions :D
-
 
 ![](./profile/stats.svg)
 ![](./profile/top-langs.svg)
