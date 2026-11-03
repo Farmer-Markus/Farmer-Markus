@@ -5,8 +5,8 @@ I love open source software and my goal is to rewrite Nintendo's Legend of Zelda
 - Create Linux mime editor / TUI interface
 - Enhance [Settlers 2 android port](https://github.com/Farmer-Markus/s25rttr-android)
 - Create 2D [Factorio](https://www.factorio.com/) inspired game
-- Create libNTR (Nintendo Nitro lib)
-- Recreate Nintedo's Zelda Spirit Tracks using libNTR
+- Create libnitro (Nintendo Nitro fs lib)
+- Recreate Nintedo's Zelda Spirit Tracks using libnitro
 
 ### AI
 I like AI being used to help develop software, but not AI developing software alone. <br>
